@@ -7,6 +7,7 @@ from groq import Groq
 from textblob import TextBlob
 from sklearn.feature_extraction.text import TfidfVectorizer
 import re
+import os
 
 app = FastAPI(title="YouTube Summarizer API")
 
@@ -17,7 +18,7 @@ app.add_middleware(
     allow_headers=["*"],
 )
 
-GROQ_API_KEY = "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"
+GROQ_API_KEY = os.getenv("GROQ_API_KEY")
 client = Groq(api_key=GROQ_API_KEY)
 
 # In-memory cache
