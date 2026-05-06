@@ -1,5 +1,3 @@
-fastapi
-uvicorn
 streamlit
 plotly
 requests
@@ -7,5 +5,4 @@ groq
 youtube-transcript-api
 textblob
 scikit-learn
-fpdf2
 pydantic
